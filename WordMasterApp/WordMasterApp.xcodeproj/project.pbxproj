@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02F25D381C1BC8EB00277E30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F25D371C1BC8EB00277E30 /* main.m */; };
+		02F25D3B1C1BC8EB00277E30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F25D3A1C1BC8EB00277E30 /* AppDelegate.m */; };
+		02F25D3E1C1BC8EB00277E30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F25D3D1C1BC8EB00277E30 /* ViewController.m */; };
+		02F25D411C1BC8EB00277E30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F25D3F1C1BC8EB00277E30 /* Main.storyboard */; };
+		02F25D431C1BC8EB00277E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F25D421C1BC8EB00277E30 /* Assets.xcassets */; };
+		02F25D461C1BC8EB00277E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F25D441C1BC8EB00277E30 /* LaunchScreen.storyboard */; };
+		02F25D511C1BC8EC00277E30 /* WordMasterAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F25D501C1BC8EC00277E30 /* WordMasterAppTests.m */; };
+		02F25D5C1C1BC8EC00277E30 /* WordMasterAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F25D5B1C1BC8EC00277E30 /* WordMasterAppUITests.m */; };
+		02F25D6B1C1BC96600277E30 /* dict.db in Resources */ = {isa = PBXBuildFile; fileRef = 02F25D6A1C1BC96600277E30 /* dict.db */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02F25D4D1C1BC8EC00277E30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02F25D2B1C1BC8EB00277E30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02F25D321C1BC8EB00277E30;
+			remoteInfo = WordMasterApp;
+		};
+		02F25D581C1BC8EC00277E30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02F25D2B1C1BC8EB00277E30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02F25D321C1BC8EB00277E30;
+			remoteInfo = WordMasterApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02F25D331C1BC8EB00277E30 /* WordMasterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordMasterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02F25D371C1BC8EB00277E30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		02F25D391C1BC8EB00277E30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		02F25D3A1C1BC8EB00277E30 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		02F25D3C1C1BC8EB00277E30 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		02F25D3D1C1BC8EB00277E30 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		02F25D401C1BC8EB00277E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		02F25D421C1BC8EB00277E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02F25D451C1BC8EB00277E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		02F25D471C1BC8EB00277E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02F25D4C1C1BC8EC00277E30 /* WordMasterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordMasterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02F25D501C1BC8EC00277E30 /* WordMasterAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordMasterAppTests.m; sourceTree = "<group>"; };
+		02F25D521C1BC8EC00277E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02F25D571C1BC8EC00277E30 /* WordMasterAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordMasterAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02F25D5B1C1BC8EC00277E30 /* WordMasterAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordMasterAppUITests.m; sourceTree = "<group>"; };
+		02F25D5D1C1BC8EC00277E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02F25D6A1C1BC96600277E30 /* dict.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = dict.db; path = ../../dict.db; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02F25D301C1BC8EB00277E30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02F25D491C1BC8EC00277E30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02F25D541C1BC8EC00277E30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02F25D2A1C1BC8EB00277E30 = {
+			isa = PBXGroup;
+			children = (
+				02F25D351C1BC8EB00277E30 /* WordMasterApp */,
+				02F25D4F1C1BC8EC00277E30 /* WordMasterAppTests */,
+				02F25D5A1C1BC8EC00277E30 /* WordMasterAppUITests */,
+				02F25D341C1BC8EB00277E30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02F25D341C1BC8EB00277E30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02F25D331C1BC8EB00277E30 /* WordMasterApp.app */,
+				02F25D4C1C1BC8EC00277E30 /* WordMasterAppTests.xctest */,
+				02F25D571C1BC8EC00277E30 /* WordMasterAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02F25D351C1BC8EB00277E30 /* WordMasterApp */ = {
+			isa = PBXGroup;
+			children = (
+				02F25D391C1BC8EB00277E30 /* AppDelegate.h */,
+				02F25D3A1C1BC8EB00277E30 /* AppDelegate.m */,
+				02F25D3C1C1BC8EB00277E30 /* ViewController.h */,
+				02F25D3D1C1BC8EB00277E30 /* ViewController.m */,
+				02F25D3F1C1BC8EB00277E30 /* Main.storyboard */,
+				02F25D421C1BC8EB00277E30 /* Assets.xcassets */,
+				02F25D441C1BC8EB00277E30 /* LaunchScreen.storyboard */,
+				02F25D471C1BC8EB00277E30 /* Info.plist */,
+				02F25D691C1BC95200277E30 /* Model */,
+				02F25D361C1BC8EB00277E30 /* Supporting Files */,
+			);
+			path = WordMasterApp;
+			sourceTree = "<group>";
+		};
+		02F25D361C1BC8EB00277E30 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02F25D371C1BC8EB00277E30 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		02F25D4F1C1BC8EC00277E30 /* WordMasterAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				02F25D501C1BC8EC00277E30 /* WordMasterAppTests.m */,
+				02F25D521C1BC8EC00277E30 /* Info.plist */,
+			);
+			path = WordMasterAppTests;
+			sourceTree = "<group>";
+		};
+		02F25D5A1C1BC8EC00277E30 /* WordMasterAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				02F25D5B1C1BC8EC00277E30 /* WordMasterAppUITests.m */,
+				02F25D5D1C1BC8EC00277E30 /* Info.plist */,
+			);
+			path = WordMasterAppUITests;
+			sourceTree = "<group>";
+		};
+		02F25D691C1BC95200277E30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02F25D6A1C1BC96600277E30 /* dict.db */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02F25D321C1BC8EB00277E30 /* WordMasterApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02F25D601C1BC8EC00277E30 /* Build configuration list for PBXNativeTarget "WordMasterApp" */;
+			buildPhases = (
+				02F25D2F1C1BC8EB00277E30 /* Sources */,
+				02F25D301C1BC8EB00277E30 /* Frameworks */,
+				02F25D311C1BC8EB00277E30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WordMasterApp;
+			productName = WordMasterApp;
+			productReference = 02F25D331C1BC8EB00277E30 /* WordMasterApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		02F25D4B1C1BC8EC00277E30 /* WordMasterAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02F25D631C1BC8EC00277E30 /* Build configuration list for PBXNativeTarget "WordMasterAppTests" */;
+			buildPhases = (
+				02F25D481C1BC8EC00277E30 /* Sources */,
+				02F25D491C1BC8EC00277E30 /* Frameworks */,
+				02F25D4A1C1BC8EC00277E30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02F25D4E1C1BC8EC00277E30 /* PBXTargetDependency */,
+			);
+			name = WordMasterAppTests;
+			productName = WordMasterAppTests;
+			productReference = 02F25D4C1C1BC8EC00277E30 /* WordMasterAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		02F25D561C1BC8EC00277E30 /* WordMasterAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02F25D661C1BC8EC00277E30 /* Build configuration list for PBXNativeTarget "WordMasterAppUITests" */;
+			buildPhases = (
+				02F25D531C1BC8EC00277E30 /* Sources */,
+				02F25D541C1BC8EC00277E30 /* Frameworks */,
+				02F25D551C1BC8EC00277E30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02F25D591C1BC8EC00277E30 /* PBXTargetDependency */,
+			);
+			name = WordMasterAppUITests;
+			productName = WordMasterAppUITests;
+			productReference = 02F25D571C1BC8EC00277E30 /* WordMasterAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02F25D2B1C1BC8EB00277E30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Ludwig;
+				TargetAttributes = {
+					02F25D321C1BC8EB00277E30 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					02F25D4B1C1BC8EC00277E30 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 02F25D321C1BC8EB00277E30;
+					};
+					02F25D561C1BC8EC00277E30 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 02F25D321C1BC8EB00277E30;
+					};
+				};
+			};
+			buildConfigurationList = 02F25D2E1C1BC8EB00277E30 /* Build configuration list for PBXProject "WordMasterApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02F25D2A1C1BC8EB00277E30;
+			productRefGroup = 02F25D341C1BC8EB00277E30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02F25D321C1BC8EB00277E30 /* WordMasterApp */,
+				02F25D4B1C1BC8EC00277E30 /* WordMasterAppTests */,
+				02F25D561C1BC8EC00277E30 /* WordMasterAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02F25D311C1BC8EB00277E30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02F25D461C1BC8EB00277E30 /* LaunchScreen.storyboard in Resources */,
+				02F25D431C1BC8EB00277E30 /* Assets.xcassets in Resources */,
+				02F25D411C1BC8EB00277E30 /* Main.storyboard in Resources */,
+				02F25D6B1C1BC96600277E30 /* dict.db in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02F25D4A1C1BC8EC00277E30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02F25D551C1BC8EC00277E30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02F25D2F1C1BC8EB00277E30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02F25D3E1C1BC8EB00277E30 /* ViewController.m in Sources */,
+				02F25D3B1C1BC8EB00277E30 /* AppDelegate.m in Sources */,
+				02F25D381C1BC8EB00277E30 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02F25D481C1BC8EC00277E30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02F25D511C1BC8EC00277E30 /* WordMasterAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02F25D531C1BC8EC00277E30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02F25D5C1C1BC8EC00277E30 /* WordMasterAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02F25D4E1C1BC8EC00277E30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02F25D321C1BC8EB00277E30 /* WordMasterApp */;
+			targetProxy = 02F25D4D1C1BC8EC00277E30 /* PBXContainerItemProxy */;
+		};
+		02F25D591C1BC8EC00277E30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02F25D321C1BC8EB00277E30 /* WordMasterApp */;
+			targetProxy = 02F25D581C1BC8EC00277E30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		02F25D3F1C1BC8EB00277E30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02F25D401C1BC8EB00277E30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		02F25D441C1BC8EB00277E30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02F25D451C1BC8EB00277E30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		02F25D5E1C1BC8EC00277E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		02F25D5F1C1BC8EC00277E30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02F25D611C1BC8EC00277E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WordMasterApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ludwig.WordMasterApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		02F25D621C1BC8EC00277E30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WordMasterApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ludwig.WordMasterApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		02F25D641C1BC8EC00277E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WordMasterAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ludwig.WordMasterAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordMasterApp.app/WordMasterApp";
+			};
+			name = Debug;
+		};
+		02F25D651C1BC8EC00277E30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WordMasterAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ludwig.WordMasterAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordMasterApp.app/WordMasterApp";
+			};
+			name = Release;
+		};
+		02F25D671C1BC8EC00277E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WordMasterAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ludwig.WordMasterAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WordMasterApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		02F25D681C1BC8EC00277E30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WordMasterAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ludwig.WordMasterAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WordMasterApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02F25D2E1C1BC8EB00277E30 /* Build configuration list for PBXProject "WordMasterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02F25D5E1C1BC8EC00277E30 /* Debug */,
+				02F25D5F1C1BC8EC00277E30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02F25D601C1BC8EC00277E30 /* Build configuration list for PBXNativeTarget "WordMasterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02F25D611C1BC8EC00277E30 /* Debug */,
+				02F25D621C1BC8EC00277E30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		02F25D631C1BC8EC00277E30 /* Build configuration list for PBXNativeTarget "WordMasterAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02F25D641C1BC8EC00277E30 /* Debug */,
+				02F25D651C1BC8EC00277E30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		02F25D661C1BC8EC00277E30 /* Build configuration list for PBXNativeTarget "WordMasterAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02F25D671C1BC8EC00277E30 /* Debug */,
+				02F25D681C1BC8EC00277E30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02F25D2B1C1BC8EB00277E30 /* Project object */;
+}
