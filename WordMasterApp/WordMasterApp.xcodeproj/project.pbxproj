@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02E196661C23DF9600D6F856 /* SYXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E196651C23DF9600D6F856 /* SYXMainViewController.m */; };
+		02E196691C23E22400D6F856 /* SYXResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E196681C23E22400D6F856 /* SYXResultsTableViewController.m */; };
+		02E388441C2314E100B6605C /* SYXReferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E388431C2314E100B6605C /* SYXReferenceViewController.m */; };
+		02E3DAA31C27CB8700B60873 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E3DAA21C27CB8700B60873 /* libsqlite3.tbd */; };
+		02E4625D1C2AE058004EDF47 /* SYXDictItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E4625C1C2AE058004EDF47 /* SYXDictItem.m */; };
+		02E462601C2AE170004EDF47 /* SYXDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E4625F1C2AE170004EDF47 /* SYXDBManager.m */; };
 		02F25D381C1BC8EB00277E30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F25D371C1BC8EB00277E30 /* main.m */; };
 		02F25D3B1C1BC8EB00277E30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F25D3A1C1BC8EB00277E30 /* AppDelegate.m */; };
 		02F25D3E1C1BC8EB00277E30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F25D3D1C1BC8EB00277E30 /* ViewController.m */; };
@@ -36,6 +42,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02E196641C23DF9600D6F856 /* SYXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXMainViewController.h; sourceTree = "<group>"; };
+		02E196651C23DF9600D6F856 /* SYXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXMainViewController.m; sourceTree = "<group>"; };
+		02E196671C23E22400D6F856 /* SYXResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXResultsTableViewController.h; sourceTree = "<group>"; };
+		02E196681C23E22400D6F856 /* SYXResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXResultsTableViewController.m; sourceTree = "<group>"; };
+		02E388421C2314E100B6605C /* SYXReferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXReferenceViewController.h; sourceTree = "<group>"; };
+		02E388431C2314E100B6605C /* SYXReferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXReferenceViewController.m; sourceTree = "<group>"; };
+		02E3DAA21C27CB8700B60873 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		02E4625B1C2AE058004EDF47 /* SYXDictItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXDictItem.h; sourceTree = "<group>"; };
+		02E4625C1C2AE058004EDF47 /* SYXDictItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXDictItem.m; sourceTree = "<group>"; };
+		02E4625E1C2AE170004EDF47 /* SYXDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXDBManager.h; sourceTree = "<group>"; };
+		02E4625F1C2AE170004EDF47 /* SYXDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXDBManager.m; sourceTree = "<group>"; };
 		02F25D331C1BC8EB00277E30 /* WordMasterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordMasterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F25D371C1BC8EB00277E30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		02F25D391C1BC8EB00277E30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E3DAA31C27CB8700B60873 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,7 @@
 		02F25D2A1C1BC8EB00277E30 = {
 			isa = PBXGroup;
 			children = (
+				02E3DAA21C27CB8700B60873 /* libsqlite3.tbd */,
 				02F25D351C1BC8EB00277E30 /* WordMasterApp */,
 				02F25D4F1C1BC8EC00277E30 /* WordMasterAppTests */,
 				02F25D5A1C1BC8EC00277E30 /* WordMasterAppUITests */,
@@ -113,6 +132,12 @@
 				02F25D471C1BC8EB00277E30 /* Info.plist */,
 				02F25D691C1BC95200277E30 /* Model */,
 				02F25D361C1BC8EB00277E30 /* Supporting Files */,
+				02E388421C2314E100B6605C /* SYXReferenceViewController.h */,
+				02E388431C2314E100B6605C /* SYXReferenceViewController.m */,
+				02E196641C23DF9600D6F856 /* SYXMainViewController.h */,
+				02E196651C23DF9600D6F856 /* SYXMainViewController.m */,
+				02E196671C23E22400D6F856 /* SYXResultsTableViewController.h */,
+				02E196681C23E22400D6F856 /* SYXResultsTableViewController.m */,
 			);
 			path = WordMasterApp;
 			sourceTree = "<group>";
@@ -146,6 +171,10 @@
 		02F25D691C1BC95200277E30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				02E4625E1C2AE170004EDF47 /* SYXDBManager.h */,
+				02E4625F1C2AE170004EDF47 /* SYXDBManager.m */,
+				02E4625B1C2AE058004EDF47 /* SYXDictItem.h */,
+				02E4625C1C2AE058004EDF47 /* SYXDictItem.m */,
 				02F25D6A1C1BC96600277E30 /* dict.db */,
 			);
 			name = Model;
@@ -218,6 +247,7 @@
 				TargetAttributes = {
 					02F25D321C1BC8EB00277E30 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = QBH68LBQW7;
 					};
 					02F25D4B1C1BC8EC00277E30 = {
 						CreatedOnToolsVersion = 7.1;
@@ -283,8 +313,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				02F25D3E1C1BC8EB00277E30 /* ViewController.m in Sources */,
+				02E388441C2314E100B6605C /* SYXReferenceViewController.m in Sources */,
+				02E196661C23DF9600D6F856 /* SYXMainViewController.m in Sources */,
+				02E196691C23E22400D6F856 /* SYXResultsTableViewController.m in Sources */,
 				02F25D3B1C1BC8EB00277E30 /* AppDelegate.m in Sources */,
 				02F25D381C1BC8EB00277E30 /* main.m in Sources */,
+				02E4625D1C2AE058004EDF47 /* SYXDictItem.m in Sources */,
+				02E462601C2AE170004EDF47 /* SYXDBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +460,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WordMasterApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ludwig.WordMasterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,7 +473,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WordMasterApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ludwig.WordMasterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -510,6 +549,7 @@
 				02F25D621C1BC8EC00277E30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02F25D631C1BC8EC00277E30 /* Build configuration list for PBXNativeTarget "WordMasterAppTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +558,7 @@
 				02F25D651C1BC8EC00277E30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02F25D661C1BC8EC00277E30 /* Build configuration list for PBXNativeTarget "WordMasterAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +567,7 @@
 				02F25D681C1BC8EC00277E30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
