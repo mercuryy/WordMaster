@@ -6,7 +6,8 @@ App for memorizing vocabulary on iOS
 ## 功能
 
 ## 进展
-[15/12/12] 生成了内置词典文件dict.db。网上已有的程序可将mdx格式词典文件转换成txt文本文件。GenerateDB是自己撰写的C++程序，用于将这些txt文件转化成可被ios平台支持的SQLite数据库文件，可进一步被app调用。
+[15/12/12] 生成了内置词典文件dict.db。网上已有的程序可将mdx格式词典文件转换成txt文本文件。GenerateDB是自己撰写的C++程序，用于将这些txt文件转化成可被ios平台支持的SQLite数据库文件，可进一步被app调用。</br>
+[15/12/23] 完成了基本的词典查询功能。
 
 ## Credit
 MDX词典转化工具 2.3 code by yhssdl</br>
