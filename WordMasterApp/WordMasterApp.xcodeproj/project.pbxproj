@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02DDACEC1C50BE9600AADEFF /* SYXWordListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDACEB1C50BE9600AADEFF /* SYXWordListTableViewController.m */; };
+		02DDACEF1C50C63C00AADEFF /* SYXCustomListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDACEE1C50C63C00AADEFF /* SYXCustomListTableViewController.m */; };
+		02DDACF51C511EFA00AADEFF /* SYXExamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDACF41C511EFA00AADEFF /* SYXExamViewController.m */; };
 		02E196661C23DF9600D6F856 /* SYXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E196651C23DF9600D6F856 /* SYXMainViewController.m */; };
 		02E196691C23E22400D6F856 /* SYXResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E196681C23E22400D6F856 /* SYXResultsTableViewController.m */; };
 		02E388441C2314E100B6605C /* SYXReferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E388431C2314E100B6605C /* SYXReferenceViewController.m */; };
@@ -15,7 +18,6 @@
 		02E462601C2AE170004EDF47 /* SYXDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E4625F1C2AE170004EDF47 /* SYXDBManager.m */; };
 		02F25D381C1BC8EB00277E30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F25D371C1BC8EB00277E30 /* main.m */; };
 		02F25D3B1C1BC8EB00277E30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F25D3A1C1BC8EB00277E30 /* AppDelegate.m */; };
-		02F25D3E1C1BC8EB00277E30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F25D3D1C1BC8EB00277E30 /* ViewController.m */; };
 		02F25D411C1BC8EB00277E30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F25D3F1C1BC8EB00277E30 /* Main.storyboard */; };
 		02F25D431C1BC8EB00277E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F25D421C1BC8EB00277E30 /* Assets.xcassets */; };
 		02F25D461C1BC8EB00277E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F25D441C1BC8EB00277E30 /* LaunchScreen.storyboard */; };
@@ -42,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02DDACEA1C50BE9600AADEFF /* SYXWordListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXWordListTableViewController.h; sourceTree = "<group>"; };
+		02DDACEB1C50BE9600AADEFF /* SYXWordListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXWordListTableViewController.m; sourceTree = "<group>"; };
+		02DDACED1C50C63C00AADEFF /* SYXCustomListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXCustomListTableViewController.h; sourceTree = "<group>"; };
+		02DDACEE1C50C63C00AADEFF /* SYXCustomListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXCustomListTableViewController.m; sourceTree = "<group>"; };
+		02DDACF31C511EFA00AADEFF /* SYXExamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXExamViewController.h; sourceTree = "<group>"; };
+		02DDACF41C511EFA00AADEFF /* SYXExamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXExamViewController.m; sourceTree = "<group>"; };
 		02E196641C23DF9600D6F856 /* SYXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXMainViewController.h; sourceTree = "<group>"; };
 		02E196651C23DF9600D6F856 /* SYXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXMainViewController.m; sourceTree = "<group>"; };
 		02E196671C23E22400D6F856 /* SYXResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXResultsTableViewController.h; sourceTree = "<group>"; };
@@ -57,8 +65,6 @@
 		02F25D371C1BC8EB00277E30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		02F25D391C1BC8EB00277E30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		02F25D3A1C1BC8EB00277E30 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		02F25D3C1C1BC8EB00277E30 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		02F25D3D1C1BC8EB00277E30 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		02F25D401C1BC8EB00277E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02F25D421C1BC8EB00277E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02F25D451C1BC8EB00277E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -124,8 +130,6 @@
 			children = (
 				02F25D391C1BC8EB00277E30 /* AppDelegate.h */,
 				02F25D3A1C1BC8EB00277E30 /* AppDelegate.m */,
-				02F25D3C1C1BC8EB00277E30 /* ViewController.h */,
-				02F25D3D1C1BC8EB00277E30 /* ViewController.m */,
 				02F25D3F1C1BC8EB00277E30 /* Main.storyboard */,
 				02F25D421C1BC8EB00277E30 /* Assets.xcassets */,
 				02F25D441C1BC8EB00277E30 /* LaunchScreen.storyboard */,
@@ -138,6 +142,12 @@
 				02E196651C23DF9600D6F856 /* SYXMainViewController.m */,
 				02E196671C23E22400D6F856 /* SYXResultsTableViewController.h */,
 				02E196681C23E22400D6F856 /* SYXResultsTableViewController.m */,
+				02DDACEA1C50BE9600AADEFF /* SYXWordListTableViewController.h */,
+				02DDACEB1C50BE9600AADEFF /* SYXWordListTableViewController.m */,
+				02DDACED1C50C63C00AADEFF /* SYXCustomListTableViewController.h */,
+				02DDACEE1C50C63C00AADEFF /* SYXCustomListTableViewController.m */,
+				02DDACF31C511EFA00AADEFF /* SYXExamViewController.h */,
+				02DDACF41C511EFA00AADEFF /* SYXExamViewController.m */,
 			);
 			path = WordMasterApp;
 			sourceTree = "<group>";
@@ -312,13 +322,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02F25D3E1C1BC8EB00277E30 /* ViewController.m in Sources */,
+				02DDACF51C511EFA00AADEFF /* SYXExamViewController.m in Sources */,
 				02E388441C2314E100B6605C /* SYXReferenceViewController.m in Sources */,
 				02E196661C23DF9600D6F856 /* SYXMainViewController.m in Sources */,
 				02E196691C23E22400D6F856 /* SYXResultsTableViewController.m in Sources */,
 				02F25D3B1C1BC8EB00277E30 /* AppDelegate.m in Sources */,
+				02DDACEC1C50BE9600AADEFF /* SYXWordListTableViewController.m in Sources */,
 				02F25D381C1BC8EB00277E30 /* main.m in Sources */,
 				02E4625D1C2AE058004EDF47 /* SYXDictItem.m in Sources */,
+				02DDACEF1C50C63C00AADEFF /* SYXCustomListTableViewController.m in Sources */,
 				02E462601C2AE170004EDF47 /* SYXDBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

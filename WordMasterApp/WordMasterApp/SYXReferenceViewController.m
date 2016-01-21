@@ -8,6 +8,7 @@
 
 #import "SYXReferenceViewController.h"
 #import "SYXDBManager.h"
+#import "AppDelegate.h"
 
 @interface SYXReferenceViewController ()
 
@@ -85,6 +86,13 @@
     self.labelSymbol.text = dictItem.symbol;
     self.labelCh.text = dictItem.ch;
     [self.tvc dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Event Handling
+
+- (IBAction)addToList:(id)sender {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate.wordList addObject:self.labelEn.text];
 }
 
 @end

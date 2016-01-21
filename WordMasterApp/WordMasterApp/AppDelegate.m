@@ -17,6 +17,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"firstStart"]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstStart"];
+        self.wordList = [[NSMutableArray alloc] init];
+    } else {
+     //   [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstStart"];
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        NSString *archivePath = [path stringByAppendingPathComponent:@"CustomWordList"];
+        self.wordList = [NSKeyedUnarchiver unarchiveObjectWithFile:archivePath];
+    }
     return YES;
 }
 
@@ -28,6 +38,9 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *archivePath = [path stringByAppendingPathComponent:@"CustomWordList"];
+    [NSKeyedArchiver archiveRootObject:self.wordList toFile:archivePath];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -40,6 +53,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+
 }
 
 @end
