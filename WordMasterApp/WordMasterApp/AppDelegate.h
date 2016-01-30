@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SYXDBManager.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) SYXDBManager *dbManager;
 @property (strong, nonatomic) NSMutableArray *wordList;
 
 @end

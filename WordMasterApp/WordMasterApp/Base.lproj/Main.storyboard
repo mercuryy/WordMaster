@@ -27,7 +27,10 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UON-dn-ofe">
                                         <rect key="frame" x="477" y="49" width="46" height="30"/>
-                                        <state key="normal" title="begin"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <state key="normal" title="begin">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="Buj-V9-xgg" kind="show" id="JRC-8K-1LE"/>
                                         </connections>
@@ -68,9 +71,85 @@
                     <view key="view" contentMode="scaleToFill" id="ivN-if-g2F">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHO-TF-fkB">
+                                <rect key="frame" x="0.0" y="521" width="600" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="不认识"/>
+                                <connections>
+                                    <action selector="touchNo:" destination="onc-SO-DW8" eventType="touchUpInside" id="8BS-3M-oCj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugu-rh-5Zz">
+                                <rect key="frame" x="0.0" y="489" width="600" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="认识"/>
+                                <connections>
+                                    <action selector="touchYes:" destination="onc-SO-DW8" eventType="touchUpInside" id="JJD-Qw-LUa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tid-48-2Yd">
+                                <rect key="frame" x="20" y="72" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfy-Rt-7ZV">
+                                <rect key="frame" x="20" y="149" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7K2-GG-mPi">
+                                <rect key="frame" x="20" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtn-xS-4Nx">
+                                <rect key="frame" x="0.0" y="506" width="600" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="vYk-0i-aCd"/>
+                                </constraints>
+                                <state key="normal" title="下一个"/>
+                                <connections>
+                                    <action selector="touchNext:" destination="onc-SO-DW8" eventType="touchUpInside" id="fec-e1-rK1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="De6-FV-FjR" firstAttribute="top" secondItem="Jtn-xS-4Nx" secondAttribute="bottom" id="2U6-2f-zxg"/>
+                            <constraint firstItem="Tid-48-2Yd" firstAttribute="leading" secondItem="ivN-if-g2F" secondAttribute="leadingMargin" id="7Gy-Ue-lxc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jtn-xS-4Nx" secondAttribute="trailing" constant="-20" id="88q-hn-lzC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NHO-TF-fkB" secondAttribute="trailing" constant="-20" id="9EO-hf-ID7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ugu-rh-5Zz" secondAttribute="trailing" constant="-20" id="9gX-bW-PNk"/>
+                            <constraint firstItem="Tid-48-2Yd" firstAttribute="top" secondItem="xrb-Nj-xn7" secondAttribute="bottom" constant="8" id="AJ2-XB-n6x"/>
+                            <constraint firstItem="NHO-TF-fkB" firstAttribute="top" secondItem="Ugu-rh-5Zz" secondAttribute="bottom" constant="2" id="DOV-OJ-Hnk"/>
+                            <constraint firstItem="7K2-GG-mPi" firstAttribute="centerY" secondItem="ivN-if-g2F" secondAttribute="centerY" id="IDX-6c-bfB"/>
+                            <constraint firstItem="NHO-TF-fkB" firstAttribute="leading" secondItem="ivN-if-g2F" secondAttribute="leadingMargin" constant="-20" id="KHp-7h-IsP"/>
+                            <constraint firstItem="De6-FV-FjR" firstAttribute="top" secondItem="NHO-TF-fkB" secondAttribute="bottom" id="LmA-zx-jzS"/>
+                            <constraint firstItem="De6-FV-FjR" firstAttribute="top" secondItem="Jtn-xS-4Nx" secondAttribute="bottom" id="M0P-P5-vPr"/>
+                            <constraint firstItem="Yfy-Rt-7ZV" firstAttribute="top" secondItem="Tid-48-2Yd" secondAttribute="bottom" constant="56" id="N8G-M2-xl2"/>
+                            <constraint firstItem="Jtn-xS-4Nx" firstAttribute="leading" secondItem="ivN-if-g2F" secondAttribute="leadingMargin" constant="-20" id="RlJ-GS-T7w"/>
+                            <constraint firstItem="Yfy-Rt-7ZV" firstAttribute="leading" secondItem="ivN-if-g2F" secondAttribute="leadingMargin" id="UDt-rR-vzO"/>
+                            <constraint firstItem="7K2-GG-mPi" firstAttribute="leading" secondItem="ivN-if-g2F" secondAttribute="leadingMargin" id="c8E-oK-bIC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jtn-xS-4Nx" secondAttribute="trailing" constant="-20" id="ddX-x0-9ax"/>
+                            <constraint firstItem="Ugu-rh-5Zz" firstAttribute="leading" secondItem="ivN-if-g2F" secondAttribute="leadingMargin" constant="-20" id="gqW-76-MtF"/>
+                            <constraint firstItem="Jtn-xS-4Nx" firstAttribute="leading" secondItem="ivN-if-g2F" secondAttribute="leadingMargin" constant="-20" id="jhg-w7-HCg"/>
+                            <constraint firstItem="7K2-GG-mPi" firstAttribute="leading" secondItem="ivN-if-g2F" secondAttribute="leadingMargin" id="mB7-uR-7ka"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oN4-Kt-bKb"/>
+                    <connections>
+                        <outlet property="buttonNext" destination="Jtn-xS-4Nx" id="sCX-B5-di2"/>
+                        <outlet property="buttonNo" destination="NHO-TF-fkB" id="Trt-lW-D2A"/>
+                        <outlet property="buttonYes" destination="Ugu-rh-5Zz" id="gB9-ba-ghq"/>
+                        <outlet property="labelCh" destination="7K2-GG-mPi" id="6wc-5f-a71"/>
+                        <outlet property="labelEn" destination="Tid-48-2Yd" id="Lcc-8u-1CF"/>
+                        <outlet property="labelSymbol" destination="Yfy-Rt-7ZV" id="MxR-xR-EnX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5m-rm-t6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,21 +179,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGc-Wu-dHQ">
-                                <rect key="frame" x="534" y="84" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="addToList:" destination="c0I-2i-c2v" eventType="touchUpInside" id="wL3-pg-Hei"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9l9-Ub-7i7">
                                 <rect key="frame" x="20" y="84" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGc-Wu-dHQ">
+                                <rect key="frame" x="501" y="84" width="79" height="25"/>
+                                <connections>
+                                    <action selector="addToList:" destination="c0I-2i-c2v" eventType="touchUpInside" id="wL3-pg-Hei"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="g9d-3u-Ahe" firstAttribute="top" secondItem="9l9-Ub-7i7" secondAttribute="bottom" constant="41" id="1pB-0l-p1k"/>
                             <constraint firstItem="RGc-Wu-dHQ" firstAttribute="top" secondItem="sOG-Av-RTj" secondAttribute="bottom" constant="20" id="89p-Gu-owf"/>
@@ -133,6 +211,7 @@
                         <outlet property="labelCh" destination="j7D-j4-zt1" id="P4M-Ny-O6R"/>
                         <outlet property="labelEn" destination="9l9-Ub-7i7" id="mKk-y8-8ep"/>
                         <outlet property="labelSymbol" destination="g9d-3u-Ahe" id="d9D-xn-qAg"/>
+                        <outlet property="markStar" destination="RGc-Wu-dHQ" id="DeY-kU-FdC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="as4-Z4-4AA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -165,7 +244,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="POt-df-TSL" kind="presentation" id="D5n-Vg-esv"/>
+                                    <segue destination="POt-df-TSL" kind="show" id="D5n-Vg-esv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -238,11 +317,11 @@
             </objects>
             <point key="canvasLocation" x="712" y="1644"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--背词-->
         <scene sceneID="hUx-LR-K8i">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P4j-Fr-ItJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="aaU-Qj-85V"/>
+                    <tabBarItem key="tabBarItem" title="背词" image="Home-25" id="aaU-Qj-85V"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HRR-cQ-zwu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -257,11 +336,11 @@
             </objects>
             <point key="canvasLocation" x="1530" y="296"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--词典-->
         <scene sceneID="rJB-cg-t92">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7DN-oV-oKW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="wyd-xj-eNL"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="词典" image="Search-25" id="wyd-xj-eNL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EKF-Ps-EGL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -276,11 +355,11 @@
             </objects>
             <point key="canvasLocation" x="1530" y="971"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--更多-->
         <scene sceneID="xmC-Es-HfH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zko-JW-zO0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="Vfu-he-w86"/>
+                    <tabBarItem key="tabBarItem" title="更多" image="More-25" id="Vfu-he-w86"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HcJ-U5-6TZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -332,4 +411,9 @@
             <point key="canvasLocation" x="3128" y="296"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Home-25" width="25" height="25"/>
+        <image name="More-25" width="25" height="25"/>
+        <image name="Search-25" width="25" height="25"/>
+    </resources>
 </document>

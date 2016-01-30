@@ -12,13 +12,17 @@
 
 @interface SYXReferenceViewController ()
 
-@property (nonatomic, strong) UISearchController *searchController;
-@property (nonatomic, strong) SYXDBManager *dbManager;
-@property (nonatomic, strong) UITableViewController *tvc;
+@property (strong, nonatomic) SYXDBManager *dbManager;
+
+@property (strong, nonatomic) UISearchController *searchController;
+@property (strong, nonatomic) UITableViewController *tvc;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelEn;
 @property (weak, nonatomic) IBOutlet UILabel *labelSymbol;
 @property (weak, nonatomic) IBOutlet UILabel *labelCh;
+@property (weak, nonatomic) IBOutlet UIButton *markStar;
+
+@property NSInteger inList;
 
 @end
 
@@ -43,21 +47,24 @@
     
     self.definesPresentationContext = YES;
     
-    self.dbManager = [[SYXDBManager alloc] init];
-    [self.dbManager open];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.dbManager = appDelegate.dbManager;
     
     self.labelEn.text = nil;
     self.labelSymbol.text = nil;
     self.labelCh.text = nil;
     self.labelCh.lineBreakMode = NSLineBreakByWordWrapping;
+    
+    self.markStar.enabled = NO;
+    
+    self.inList = -1;
+    
     //UIBarButtonItem *searchBarItem = [[UIBarButtonItem alloc] initWithCustomView:self.searchBar];
     //self.navigationItem.leftBarButtonItem = searchBarItem;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
-    [self.dbManager close];
     // Dispose of any resources that can be recreated.
 }
 
@@ -85,6 +92,24 @@
     self.labelEn.text = dictItem.en;
     self.labelSymbol.text = dictItem.symbol;
     self.labelCh.text = dictItem.ch;
+    
+    self.markStar.enabled = NO;
+    self.inList = -1;
+    if (self.labelEn.text != nil) {
+        self.markStar.enabled = YES;
+        [self.markStar setBackgroundImage:[UIImage imageNamed:@"Christmas Star-50"] forState:UIControlStateNormal];
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        NSInteger i;
+        for (i = 0; i < appDelegate.wordList.count; i++) {
+            NSString *word = (NSString *)[appDelegate.wordList objectAtIndex:i];
+            if ([text isEqualToString:word]) {
+                [self.markStar setBackgroundImage:[UIImage imageNamed:@"Christmas Star Filled-50"] forState:UIControlStateNormal];
+                self.inList = i;
+                break;
+            }
+        }
+    }
+    
     [self.tvc dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -92,7 +117,15 @@
 
 - (IBAction)addToList:(id)sender {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [appDelegate.wordList addObject:self.labelEn.text];
+    if (self.inList < 0) {
+        [appDelegate.wordList addObject:self.labelEn.text];
+        self.inList = appDelegate.wordList.count - 1;
+        [self.markStar setBackgroundImage:[UIImage imageNamed:@"Christmas Star Filled-50"] forState:UIControlStateNormal];
+    } else {
+        [appDelegate.wordList removeObjectAtIndex:self.inList];
+        self.inList = -1;
+        [self.markStar setBackgroundImage:[UIImage imageNamed:@"Christmas Star-50"] forState:UIControlStateNormal];
+    }
 }
 
 @end

@@ -27,6 +27,10 @@
         NSString *archivePath = [path stringByAppendingPathComponent:@"CustomWordList"];
         self.wordList = [NSKeyedUnarchiver unarchiveObjectWithFile:archivePath];
     }
+    
+    self.dbManager = [[SYXDBManager alloc] init];
+    [self.dbManager open];
+    
     return YES;
 }
 
@@ -53,7 +57,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-
+    [self.dbManager close];
 }
 
 @end

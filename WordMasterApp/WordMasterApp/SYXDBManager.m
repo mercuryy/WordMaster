@@ -33,6 +33,7 @@
 
 - (SYXDictItem *)dictItemForWord:(NSString *)word {
     SYXDictItem *dictItem = [[SYXDictItem alloc] init];
+    dictItem.en = nil;
     NSString *query = [NSString stringWithFormat:@"SELECT * FROM OXFORD WHERE en = '%@'", word];
     sqlite3_stmt *statement;
     if (sqlite3_prepare_v2(_db, [query UTF8String], -1, &statement, nil) == SQLITE_OK) {
@@ -40,9 +41,15 @@
             char *en = (char *)sqlite3_column_text(statement, 0);
             char *symbol = (char *)sqlite3_column_text(statement, 1);
             char *ch = (char *)sqlite3_column_text(statement, 2);
-            dictItem.en = [[NSString alloc] initWithUTF8String:en];
-            dictItem.symbol = [[NSString alloc] initWithUTF8String:symbol];
-            dictItem.ch = [[NSString alloc] initWithUTF8String:ch];
+            if (en != nil) {
+                dictItem.en = [[NSString alloc] initWithUTF8String:en];
+            }
+            if (symbol != nil) {
+                dictItem.symbol = [[NSString alloc] initWithUTF8String:symbol];
+            }
+            if (ch != nil) {
+                dictItem.ch = [[NSString alloc] initWithUTF8String:ch];
+            }
         }
     }
     return dictItem;
