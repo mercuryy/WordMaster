@@ -8,6 +8,7 @@
 
 #import "SYXCustomListTableViewController.h"
 #import "AppDelegate.h"
+#import "SYXListItem.h"
 
 @interface SYXCustomListTableViewController ()
 
@@ -23,6 +24,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.navigationItem.title = [[NSString alloc] initWithFormat:@"全部单词(%d)", appDelegate.wordList.count];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,13 +37,16 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Incomplete implementation, return the number of sections
-    return 1;
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    return [appDelegate.listByDate count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete implementation, return the number of rows
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    return [appDelegate.wordList count];
+    //return [appDelegate.wordList count];
+    NSMutableArray *currentList = [appDelegate.listByDate objectAtIndex:appDelegate.listByDate.count - 1 - section];
+    return currentList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -49,10 +55,26 @@
     // Configure the cell...
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    cell.textLabel.text = [[NSString alloc] initWithString:[appDelegate.wordList objectAtIndex:indexPath.row]];
+    NSMutableArray *currentlist = [appDelegate.listByDate objectAtIndex:appDelegate.listByDate.count - 1 - indexPath.section];
+    SYXListItem *listItem = (SYXListItem *)[currentlist objectAtIndex:currentlist.count - 1 - indexPath.row];
+    cell.textLabel.text = [[NSString alloc] initWithString:listItem.word];
     return cell;
 }
 
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (appDelegate.listByDate.count > 0) {
+        NSMutableArray *currentlist = [appDelegate.listByDate objectAtIndex:appDelegate.listByDate.count - 1 - section];
+        if (currentlist.count > 0) {
+            SYXListItem *listItem = (SYXListItem *)[currentlist objectAtIndex:0];
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"yyyy年MM月dd日"];
+            return [dateFormatter stringFromDate:listItem.saveDate];
+        }
+    }
+    return nil;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

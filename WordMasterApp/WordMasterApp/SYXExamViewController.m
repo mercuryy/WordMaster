@@ -8,6 +8,7 @@
 
 #import "SYXExamViewController.h"
 #import "AppDelegate.h"
+#import "SYXListItem.h"
 
 @interface SYXExamViewController ()
 
@@ -31,13 +32,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.labelEn.text = nil;
+    self.labelSymbol.text = nil;
+    self.labelCh.text = nil;
+    if (appDelegate.wordList.count < 1) {
+        UINavigationController *navi = self.navigationController;
+        [navi.navigationController popViewControllerAnimated:YES];
+        return;
+    }
     self.dbManager = appDelegate.dbManager;
     self.customList = [[NSMutableArray alloc] initWithArray:appDelegate.wordList];
     self.index = 0;
-    self.labelEn.text = [self.customList objectAtIndex:self.index];
-    self.labelSymbol.text = nil;
-    self.labelCh.text = nil;
+    SYXListItem *listItem = (SYXListItem *)[self.customList objectAtIndex:self.index];
+    self.labelEn.text = listItem.word;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,7 +68,8 @@
     self.buttonYes.alpha = 0;
     self.buttonNo.alpha = 0;
     self.buttonNext.alpha = 1;
-    SYXDictItem *dictItem = [self.dbManager dictItemForWord:[self.customList objectAtIndex:self.index]];
+    SYXListItem *listItem = (SYXListItem *)[self.customList objectAtIndex:self.index];
+    SYXDictItem *dictItem = [self.dbManager dictItemForWord:listItem.word];
     self.labelEn.text = dictItem.en;
     self.labelSymbol.text = dictItem.symbol;
     self.labelCh.text = dictItem.ch;
@@ -69,7 +79,8 @@
     self.buttonYes.alpha = 0;
     self.buttonNo.alpha = 0;
     self.buttonNext.alpha = 1;
-    SYXDictItem *dictItem = [self.dbManager dictItemForWord:[self.customList objectAtIndex:self.index]];
+    SYXListItem *listItem = (SYXListItem *)[self.customList objectAtIndex:self.index];
+    SYXDictItem *dictItem = [self.dbManager dictItemForWord:listItem.word];
     self.labelEn.text = dictItem.en;
     self.labelSymbol.text = dictItem.symbol;
     self.labelCh.text = dictItem.ch;
@@ -82,11 +93,13 @@
     self.buttonNo.alpha = 1;
     if (self.index < self.customList.count - 1) {
         self.index++;
-        self.labelEn.text = [self.customList objectAtIndex:self.index];
+        SYXListItem *listItem = (SYXListItem *)[self.customList objectAtIndex:self.index];
+        self.labelEn.text = listItem.word;
         self.labelSymbol.text = nil;
         self.labelCh.text = nil;
     } else {
-        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+        UINavigationController *navi = self.navigationController;
+        [navi.navigationController popViewControllerAnimated:YES];
     }
 }
 

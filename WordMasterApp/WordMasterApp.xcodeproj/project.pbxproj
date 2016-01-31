@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02DA7B6E1C5DE752005AE881 /* SYXListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7B6D1C5DE752005AE881 /* SYXListItem.m */; };
 		02DDACEC1C50BE9600AADEFF /* SYXWordListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDACEB1C50BE9600AADEFF /* SYXWordListTableViewController.m */; };
 		02DDACEF1C50C63C00AADEFF /* SYXCustomListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDACEE1C50C63C00AADEFF /* SYXCustomListTableViewController.m */; };
 		02DDACF51C511EFA00AADEFF /* SYXExamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDACF41C511EFA00AADEFF /* SYXExamViewController.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02DA7B6C1C5DE752005AE881 /* SYXListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXListItem.h; sourceTree = "<group>"; };
+		02DA7B6D1C5DE752005AE881 /* SYXListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXListItem.m; sourceTree = "<group>"; };
 		02DDACEA1C50BE9600AADEFF /* SYXWordListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXWordListTableViewController.h; sourceTree = "<group>"; };
 		02DDACEB1C50BE9600AADEFF /* SYXWordListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXWordListTableViewController.m; sourceTree = "<group>"; };
 		02DDACED1C50C63C00AADEFF /* SYXCustomListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXCustomListTableViewController.h; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 		02F25D691C1BC95200277E30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				02DA7B6C1C5DE752005AE881 /* SYXListItem.h */,
+				02DA7B6D1C5DE752005AE881 /* SYXListItem.m */,
 				02E4625E1C2AE170004EDF47 /* SYXDBManager.h */,
 				02E4625F1C2AE170004EDF47 /* SYXDBManager.m */,
 				02E4625B1C2AE058004EDF47 /* SYXDictItem.h */,
@@ -328,6 +333,7 @@
 				02E196691C23E22400D6F856 /* SYXResultsTableViewController.m in Sources */,
 				02F25D3B1C1BC8EB00277E30 /* AppDelegate.m in Sources */,
 				02DDACEC1C50BE9600AADEFF /* SYXWordListTableViewController.m in Sources */,
+				02DA7B6E1C5DE752005AE881 /* SYXListItem.m in Sources */,
 				02F25D381C1BC8EB00277E30 /* main.m in Sources */,
 				02E4625D1C2AE058004EDF47 /* SYXDictItem.m in Sources */,
 				02DDACEF1C50C63C00AADEFF /* SYXCustomListTableViewController.m in Sources */,

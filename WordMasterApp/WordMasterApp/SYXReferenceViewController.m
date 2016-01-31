@@ -9,6 +9,7 @@
 #import "SYXReferenceViewController.h"
 #import "SYXDBManager.h"
 #import "AppDelegate.h"
+#import "SYXListItem.h"
 
 @interface SYXReferenceViewController ()
 
@@ -101,7 +102,8 @@
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         NSInteger i;
         for (i = 0; i < appDelegate.wordList.count; i++) {
-            NSString *word = (NSString *)[appDelegate.wordList objectAtIndex:i];
+            SYXListItem *listItem = (SYXListItem *)[appDelegate.wordList objectAtIndex:i];
+            NSString *word = listItem.word;
             if ([text isEqualToString:word]) {
                 [self.markStar setBackgroundImage:[UIImage imageNamed:@"Christmas Star Filled-50"] forState:UIControlStateNormal];
                 self.inList = i;
@@ -118,10 +120,51 @@
 - (IBAction)addToList:(id)sender {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     if (self.inList < 0) {
-        [appDelegate.wordList addObject:self.labelEn.text];
+        SYXListItem *listItem = [[SYXListItem alloc] init];
+        listItem.word = [[NSString alloc] initWithString:self.labelEn.text];
+        
+        NSDate *GMTDate = [NSDate date];
+        NSTimeZone *zone = [NSTimeZone systemTimeZone];
+        NSInteger interval = [zone secondsFromGMTForDate:GMTDate];
+        NSDate *date = [GMTDate dateByAddingTimeInterval:interval];
+        NSTimeInterval interv = [date timeIntervalSince1970];
+        int daySeconds = 24 * 60 * 60;
+        NSInteger allDays = interv / daySeconds;
+        listItem.saveDate = [NSDate dateWithTimeIntervalSince1970:allDays * daySeconds];
+        
+        BOOL success = NO;
+        for (int i = 0; i < appDelegate.listByDate.count; i++) {
+            NSMutableArray *currentList = (NSMutableArray *)[appDelegate.listByDate objectAtIndex:i];
+            SYXListItem *temp = (SYXListItem *)[currentList objectAtIndex:0];
+            if ([listItem.saveDate isEqualToDate:temp.saveDate]) {
+                [currentList addObject:listItem];
+                success = YES;
+            }
+        }
+        if (!success) {
+            NSMutableArray *new = [[NSMutableArray alloc] init];
+            [appDelegate.listByDate addObject:new];
+            [new addObject:listItem];
+        }
+        
+        [appDelegate.wordList addObject:listItem];
         self.inList = appDelegate.wordList.count - 1;
         [self.markStar setBackgroundImage:[UIImage imageNamed:@"Christmas Star Filled-50"] forState:UIControlStateNormal];
     } else {
+        for (int i = 0; i < appDelegate.listByDate.count; i++) {
+            NSMutableArray *currentList = (NSMutableArray *)[appDelegate.listByDate objectAtIndex:i];
+            for (int j = 0; j < currentList.count; j++) {
+                SYXListItem *temp = (SYXListItem *)[currentList objectAtIndex:j];
+                if ([temp.word isEqualToString:self.labelEn.text]) {
+                    [currentList removeObjectAtIndex:j];
+                }
+            }
+            if (currentList.count < 1) {
+                [appDelegate.listByDate removeObjectAtIndex:i];
+                i--;
+            }
+        }
+        
         [appDelegate.wordList removeObjectAtIndex:self.inList];
         self.inList = -1;
         [self.markStar setBackgroundImage:[UIImage imageNamed:@"Christmas Star-50"] forState:UIControlStateNormal];

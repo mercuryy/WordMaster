@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SYXDBManager.h"
+#import "SYXListItem.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -15,6 +16,11 @@
 
 @property (strong, nonatomic) SYXDBManager *dbManager;
 @property (strong, nonatomic) NSMutableArray *wordList;
+@property (strong, nonatomic) NSMutableArray *listByDate;
+
+@property (strong, nonatomic) NSDate *previousDate;
+
+@property (strong, nonatomic) NSMutableArray *reviewList;
 
 @end
 
